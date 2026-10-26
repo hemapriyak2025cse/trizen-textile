@@ -1,0 +1,6 @@
+{
+  "name": "TRIZEN — Smart Saree Production SaaS",
+  "description": "Smart textile management platform specifically designed for small-scale saree production owners, independent weavers, and textile workers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

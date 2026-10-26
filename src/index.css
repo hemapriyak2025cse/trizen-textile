@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, .font-serif {
+    font-family: 'Cinzel', 'Cormorant Garamond', 'Noto Sans Tamil', Georgia, serif;
+  }
+}
+
+.font-tamil, :lang(ta), html[lang="ta"] body {
+  font-family: 'Noto Sans Tamil', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+
+/* Saree Production Cycle Keyframe Animations */
+@keyframes shuttleSlide {
+  0% {
+    transform: translateX(-32px);
+  }
+  50% {
+    transform: translateX(32px);
+  }
+  100% {
+    transform: translateX(-32px);
+  }
+}
+
+.shuttle-slide {
+  animation: shuttleSlide 2.6s ease-in-out infinite;
+}
+
+@keyframes spindleSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spindle-spin {
+  animation: spindleSpin 10s linear infinite;
+  transform-origin: 70px 65px;
+}
+
+@keyframes threadDash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -40;
+  }
+}
+
+.thread-dash-animated {
+  animation: threadDash 1.2s linear infinite;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes goldPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.5), 0 0 24px rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.85);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 32px rgba(212, 175, 55, 0.45);
+    border-color: #FFEAA7;
+  }
+}
+
+.active-stage-glow {
+  animation: goldPulseGlow 2.2s ease-in-out infinite;
+}
